@@ -82,7 +82,7 @@
                 android:text="⌫"
                 android:background="@drawable/button_operatorabckground"/>
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnmodulas"
+                android:id="@+id/btnPercantage"
                 style="@style/CalculatorButton"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
