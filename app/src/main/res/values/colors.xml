@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="operatorColor">#FF9800</color>
+    <color name="equalColor">#FF009688</color>
+    <color name="clearColor">#F01203</color>
+    <color name="displaybackgroundColor">#FF121212</color>
+    <color name="displayTextColor">#FFEEEEEE</color>
+
+
+
+
+</resources>
