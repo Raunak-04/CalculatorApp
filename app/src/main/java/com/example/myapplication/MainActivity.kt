@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         val buttonPercantage: Button=findViewById(R.id.btnPercantage)
 
 
-        val buttonbackspace: Button=findViewById(R.id.btnbackspace)
+        val btnbackspace: Button=findViewById(R.id.btnbackspace)
         val buttonequal: Button=findViewById(R.id.btnequal)
         val buttonclear: Button=findViewById(R.id.btnClear)
 
@@ -76,6 +76,8 @@ class MainActivity : AppCompatActivity() {
         buttondivision.setOnClickListener{ setOperation("/")}
         buttonPercantage.setOnClickListener{ setOperation("%")}
         buttonclear.setOnClickListener{clearCalculator()}
+
+        btnbackspace.setOnClickListener { deleteNum() }
 
 
         }
@@ -120,4 +122,10 @@ class MainActivity : AppCompatActivity() {
         operation=""
         isNewOperation=true
     }
+
+    private fun MainActivity.deleteNum() {
+       resultTextView.text=resultTextView.text.dropLast(1)
+
+        }
     }
+
