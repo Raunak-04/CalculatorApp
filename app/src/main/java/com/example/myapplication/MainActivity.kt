@@ -3,6 +3,7 @@ package com.example.myapplication
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -95,6 +96,9 @@ class MainActivity : AppCompatActivity() {
         operation=op
         isNewOperation=true
         previousCalculationTextView.text="$firstNumber $operation"
+        resultTextView.text="0.0"
+
+
     }
     private fun calculateResult(){
         try{
@@ -124,8 +128,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun MainActivity.deleteNum() {
-       resultTextView.text=resultTextView.text.dropLast(1)
 
+val currentText = resultTextView.text.toString()
+        if(currentText.isNotEmpty() && currentText !="0.0"&& currentText !="Error"){
+        resultTextView.text=resultTextView.text.dropLast(1)}
+        else{
+            Toast.makeText(this ,"Invalid Operation", Toast.LENGTH_SHORT).show()
         }
     }
+}
 
